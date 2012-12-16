@@ -27,6 +27,7 @@ TARGET_BOARD_PLATFORM := tegra
 TARGET_BOOTLOADER_BOARD_NAME := cardhu
 
 # Target arch settings
+TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
