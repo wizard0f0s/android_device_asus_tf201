@@ -442,7 +442,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.ShowProgress(0.2, 10)
     script.RunBackup("restore")
 
-  if OPTIONS.modelidcfg:
+  #if OPTIONS.modelidcfg:
     #script.RunConfig("")
 
   script.ShowProgress(0.2, 10)
