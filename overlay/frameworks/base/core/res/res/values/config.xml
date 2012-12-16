@@ -241,17 +241,17 @@
     <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
 
     <!-- Path to the library that contains a device specific key handler -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
+    <!-- <string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string> -->
 
     <!-- Name of that key handler class -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string>
+    <!-- <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string> -->
 
     <!-- Asus dock compatibility disabled by default -->
-    <bool name="config_hasDockBattery">true</bool>
+    <!-- <bool name="config_hasDockBattery">true</bool> -->
 
     <!-- If a dock provides a lid switch, that lid can be removed. This
          setting is used to determine, whether lidOpenRotation has to be
          applied. -->
-    <bool name="config_hasRemovableLid">true</bool>
+    <!-- <bool name="config_hasRemovableLid">true</bool> -->
 
 </resources>
