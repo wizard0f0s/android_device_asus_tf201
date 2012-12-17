@@ -98,9 +98,7 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libinvensense_mpl \
     blobpack_tfp \
-    mischelp \
-    hwcomposer.default \
-    gralloc.default
+    mischelp
 
 # Build Some Extra Apps
 PRODUCT_PACKAGES += \
