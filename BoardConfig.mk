@@ -16,12 +16,19 @@
 
 USE_CAMERA_STUB := false
 
+# Audio things
+USE_PROPRIETARY_AUDIO_EXTENSIONS := true
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := false
+BOARD_USES_TINY_AUDIO_HW := false
+COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
+
 # inherit from the proprietary version
 -include vendor/asus/tf201/BoardConfigVendor.mk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Board nameing
+# Board naming
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := tegra
 TARGET_BOOTLOADER_BOARD_NAME := cardhu
@@ -88,7 +95,7 @@ TARGET_KERNEL_CONFIG := tegra3_android_defconfig
 # Prebuilt Kernel Fallback
 TARGET_PREBUILT_KERNEL := device/asus/tf201/kernel
 
-# Coustom Tools
+# Custom Tools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf201/releasetools/tf201_ota_from_target_files
 
 # Recovery Options
