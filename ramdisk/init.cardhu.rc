@@ -96,6 +96,9 @@ on boot
     chown system system /sys/class/graphics/fb0/device/smartdimmer/aggressiveness
     chown system system /sys/class/graphics/fb0/device/smartdimmer/phase_in_adjustments
 
+# smartdimmer parameters
+    write /sys/class/graphics/fb0/device/smartdimmer/enable 0
+
 # power
     chown system system /sys/kernel/tegra_cap/core_cap_level
     chown system system /sys/kernel/tegra_cap/core_cap_state
@@ -131,10 +134,11 @@ on boot
 
 # Power management settings
     chown system system /sys/module/cpu_tegra3/parameters/no_lp
-    write /sys/module/cpu_tegra3/parameters/no_lp 0
+    write /sys/module/cpu_tegra3/parameters/no_lp 1
     #write /sys/module/tegra3_emc/parameters/emc_enable 0
     #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1000000
     write /sys/devices/system/cpu/cpufreq/interactive/boost_factor 2
+    write /sys/devices/system/cpu/cpufreq/interactive/input_boost 1
     write /sys/devices/system/cpu/cpufreq/interactive/sustain_load 80
     write /sys/module/cpu_tegra3/parameters/auto_hotplug 1
     #write /sys/module/cpuidle_t3/parameters/lp2_0_in_idle 0
