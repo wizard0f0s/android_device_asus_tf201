@@ -241,7 +241,7 @@
     <!-- <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string> -->
 
     <!-- Asus dock compatibility disabled by default -->
-    <!-- <bool name="config_hasDockBattery">true</bool> -->
+    <bool name="config_hasDockBattery">true</bool>
 
     <!-- If a dock provides a lid switch, that lid can be removed. This
          setting is used to determine, whether lidOpenRotation has to be
