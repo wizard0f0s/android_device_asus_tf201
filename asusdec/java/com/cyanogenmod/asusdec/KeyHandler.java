@@ -43,7 +43,7 @@ import com.android.internal.os.DeviceKeyHandler;
 public final class KeyHandler implements DeviceKeyHandler {
     private static final String TAG = "AsusdecKeyHandler";
 
-    private static final boolean DEBUG_KEYEVENT = true;
+    private static final boolean DEBUG_KEYEVENT = false;
 
     private static final int MAXIMUM_BACKLIGHT = android.os.PowerManager.BRIGHTNESS_ON;
     private static final int BRIGHTNESS_STEP = 10;
