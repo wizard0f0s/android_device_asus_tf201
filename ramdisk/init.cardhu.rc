@@ -134,7 +134,7 @@ on boot
 
 # Power management settings
     chown system system /sys/module/cpu_tegra3/parameters/no_lp
-    write /sys/module/cpu_tegra3/parameters/no_lp 1
+    write /sys/module/cpu_tegra3/parameters/no_lp 0
     #write /sys/module/tegra3_emc/parameters/emc_enable 0
     #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1000000
     write /sys/devices/system/cpu/cpufreq/interactive/boost_factor 2
@@ -160,7 +160,7 @@ on boot
 # Set battery poll interval
     write /sys/module/bq27x00_battery/parameters/poll_interval 30
 
-#Fuse
+# Fuse
     chmod 444 /sys/firmware/fuse/odm_production_mode
 
 # Default Read Ahead value for sdcards
@@ -170,12 +170,10 @@ on boot
     write /sys/block/mmcblk1/queue/read_ahead_kb 4096
 
 
-#GPS
+# GPS
     mkdir /data/gps
     chown system system /data/gps
     chmod 770 /data/gps
-    chown system system /sys/module/cpu_tegra/parameters/gps_start
-    chmod 600 /sys/module/cpu_tegra/parameters/gps_start
 
 # Wiimote connect status
     write /data/misc/wminput/connected 0
@@ -192,7 +190,7 @@ on boot
     mkdir /data/modem 0770 radio system
     chown radio system /sys/devices/virtual/ril/files/prox_onoff
 
-#insmod cfg80211.ko for cfg80211 and P2P mode.
+# insmod cfg80211.ko for cfg80211 and P2P mode.
     insmod /system/lib/modules/cfg80211.ko
  
 # Touch
@@ -292,7 +290,7 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     class main
     user root
     oneshot
-#Sensor load calibration files end
+# Sensor load calibration files end
 
 # create virtual SD card at /mnt/sdcard, based on the /data/media directory
 # deamon will drop to user/group system/media_rw after initializing
@@ -406,7 +404,7 @@ service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/
 on property:sys.shutdown.requested=1recovery
     start mischelp
 
-#Prepare TF service
+# Prepare TF service
 service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
     disabled
     class main
@@ -414,7 +412,7 @@ service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
     group shell
     oneshot
 
-#Create data directory and start service
+# Create data directory and start service
 on property:tf.enable=y
     mkdir /data/tf
     start tf_daemon
@@ -465,7 +463,7 @@ on property:ril.testmode=0
 
 # End of testmode patches.
 
-#Touch
+# Touch
 service touch_update /system/bin/touch_fw_update --default
     user system
     group system
