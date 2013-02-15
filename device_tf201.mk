@@ -102,6 +102,7 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libaudioutils \
     libinvensense_mpl \
+    AutoParts_tfp \
     blobpack_tfp \
     mischelp \
     hwcomposer.default \
