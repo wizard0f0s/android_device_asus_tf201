@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME "Asus Eeepad Transformer Prime TF201"
+#define BTM_DEF_LOCAL_NAME "ASUS EeePad Transformer Prime"
 
 // Networking, Capturing, Object Transfer
 // MAJOR CLASS: COMPUTER
