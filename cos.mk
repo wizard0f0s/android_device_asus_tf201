@@ -2,12 +2,12 @@
 $(call inherit-product, device/asus/tf201/full_tf201.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cos/config/common_full_tablet_wifionly.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_tf201
+PRODUCT_NAME := cos_tf201
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := tf201
 PRODUCT_MODEL := ASUS Transformer Prime TF201
